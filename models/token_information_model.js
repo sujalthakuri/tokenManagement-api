@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const TokenInformation = mongoose.model('TokenInformation',{
 
-    phonenumber : {
+    phone_number : {
         type : String
     },
 
@@ -18,3 +18,5 @@ const TokenInformation = mongoose.model('TokenInformation',{
     }
 
 })
+
+module.exports = TokenInformation;
