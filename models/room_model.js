@@ -19,7 +19,20 @@ const Room = mongoose.model('Room',{
         type : String,
         enum : ['verfied','unverified'],
         default:'unverified'
-    }
+    },
+    
+    active_token : {
+        type : String,
+
+    },
+
+    people : {
+        type : String
+    },
+
+    average_time : {
+        type : String
+    },
 
 
 

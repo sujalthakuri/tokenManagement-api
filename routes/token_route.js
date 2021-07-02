@@ -7,7 +7,7 @@ const { errorMonitor } = require('events')
 router.post('/room/token/create',function(req,res){
     active_token = req.body.active_token
     people = req.body.people
-    average_time = req.body.average_time
+    average_time = req.body.average_time 
     code = req.body.code
 
     const data = new Token({active_token:active_token, people:people, average_time:average_time, code:code})
