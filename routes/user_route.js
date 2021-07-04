@@ -58,4 +58,18 @@ router.post('/user/login', function(req,res){
     })
 })
 
+router.post('/userProfile',function(req,res){
+    const phone_number = req.body.phone_number
+
+    User.find({phone_number:phone_number})
+    .then(function(response){
+        console.log(response)
+        res.status(200).json({success:true, data : response})
+    })
+    .catch(function(err){
+        res.status(500).json({error:err})
+    })
+
+})
+
 module.exports = router;
